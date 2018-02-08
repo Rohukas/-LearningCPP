@@ -43,24 +43,20 @@ void Bank::askLoan() {
 
 	switch (choice) {
 	case 1:
-		//Call a function that prints the bank and prompts user to enter how much they wish to borrow.!
-
 		//Print the bank menu!
 
 		printBank();
 		while (loanGranted != true) {
 			cout << "Enter the amount to lend: $";
 			cin >> _loanValue;
-			if (_loanValue < _bankMoney) {
+			if (_loanValue <= _bankMoney) {
+				cola.addMoney(_loanValue);
 				break;
 			}
 			else {
 				cout << "You entered too much! Try again..." << endl;
 			}
 		}
-		//
-
-		//TAKE A LOAN CODE
 		break;
 	case 2:
 		//User does not want to take a loan! Quit the game!

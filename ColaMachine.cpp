@@ -110,6 +110,9 @@ bool ColaMachine::checkEnd() {
 
 void ColaMachine::addMoney(int money) {
 
+	//This part doesnt seem to modify the actual value
+	//Whenever It goes back to the main game loop it doesnt change.
+	_money += money;
 
 
 }
